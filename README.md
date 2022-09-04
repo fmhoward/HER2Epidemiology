@@ -1,7 +1,7 @@
 # Epidemiology and Prognosis of HER2-Low Breast Cancer in the National Cancer Data Base
 Code to compute the epidemiology and prognosis of HER2-low breast cancer in NCDB
 <br>
-<img src="https://github.com/fmhoward/DLRS/blob/main/overview.png?raw=true" width="600">
+<img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/Figure 1.png?raw=true" width="600">
 
 ## Attribution
 If you use this code in your work or find it helpful, please consider citing our work.
