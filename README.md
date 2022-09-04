@@ -6,7 +6,7 @@ Code to compute the epidemiology and prognosis of HER2-low breast cancer in NCDB
 ## Attribution
 If you use this code in your work or find it helpful, please consider citing our work.
 ```
-@article {Howard2022.07.07.499039,
+@article {
 	author = {Peiffer, Daniel and Zhao, Fangyuan and Chen, Nan and Nanda, Rita and and Olopade, Olufunmilayo I. and Huo, Dezheng and Howard, Frederick Matthew},
 	title = {Epidemiology and Prognosis of HER2-Low Breast Cancer in the National Cancer Data Base},
 	year = {2022},
