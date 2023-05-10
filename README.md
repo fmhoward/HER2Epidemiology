@@ -65,6 +65,6 @@ Total		20					80							100
 
 We can plot the resulting odds ratio as a function of the misclassification rate x, ranging from 0 (indicating the current classification was perfect) to 50 (indicating that classification of HER2-0 and HER2-low is occuring at random):
 
-<img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/missclassification.png?raw=true" width="600">
+<img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/misclassification.png?raw=true" width="600">
 
 In a <a href='https://pubmed.ncbi.nlm.nih.gov/35113160/'>prior study of 1390 laboratories surveyed by the College of American Patholgoists</a>, a high degree of discordance between HER2-0 and HER2-1+,2+,3+ by IHC was seen in 19% of samples. If we assume that for 19% of cases HER2-Low status is assigned by random chance proportional to underlying rates of HER2-0 and HER2-Low, this would indicate approximately half of these samples are misclassified, for a misclassification rate of 9.5%. We can see this would result in a true odds ratio of 0.87, which is minimally different from our reported odds ratio of 0.89, and does not support the classification of HER2-Low disease as a unique prognostic entity prior to the introduction of antibody drug conjugates for this population.
