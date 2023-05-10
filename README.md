@@ -37,3 +37,34 @@ Place the NCDB 2019 data file in csv form within the project folder, and specify
 ```
 df = load_data_her2(filename="NCDBPUF_Breast.0.2019.csv", savefile="NCDB_Subset.csv", lower=True)
 ```
+
+## Misclassification
+There have been <a href='https://pubmed.ncbi.nlm.nih.gov/35113160/'>several studies</a> suggesting that classification of HER2-low versus HER2-0 via IHC is inconsistent. This may have reduced the magnitude of associations of HER2-low status with outcomes in our findings. We can estimate the impact of misclassification on our results as follows.
+
+We take for example, the association we found of HER2-low status with lower rates of pathologic complete response to neoadjuvant chemotherapy. We use this as an example because the magnitude of the association was among the highest seen for our study, so the impact of misclassification on other outcomes is almost certainly lower. Additionally, adjusting for misclassification mathematically for odds ratios is easier than for survival models.
+
+We construct a contigency table approximating the association of HER2-low status with pathologic complete response (after adjustment for other factors); i.e. assuming approximately 35% of patients are HER2-0, approximately 20% of patients had a complete response, and the odds ratio for HER2-low status with complete response is 0.89:
+```
+		pCR	Residual Disease	Total
+HER2-0		7.4	27.6			35
+HER2-Low	12.6	52.4			65
+Total		20	80			100
+```
+
+We then assume there is an equal misclassification rate among both HER2-Low and HER2-0 patients, and that the overall number of patients misclassified is x. We can then define the rates of pathologic complete response among true HER2-0 and true HER2-low patients, along with an updated contigency table:
+
+```
+True HER2-0 pCR Rate = a = (7.4 + 0.65 * a * x - 0.35 * b * x)/(35 + 0.65 * x - 0.35 * x)
+True HER2-Low pCR Rate = b = (12.6 - 0.65 * a * x + 0.35 * b * x)/(65 + 0.35 * x - 0.65 * x) 
+
+		pCR					Residual Disease					Total
+HER2-0		7.4 + 0.65 * a * x - 0.35 * b * x	27.6 + 0.65 * (1 - a) * x - 0.35 * (1 - b) * x		35 + 0.3 * x
+HER2-Low	12.6 - 0.65 * a * x + 0.35 * b * x	52.4 - 0.65 * (1 - a) * x + 0.35 * (1 - b) * x		65 - 0.3 * x
+Total		20					80							100
+```
+
+We can plot the resulting odds ratio as a function of the misclassification rate x, ranging from 0 (indicating the current classification was perfect) to 50 (indicating that classification of HER2-0 and HER2-low is occuring at random):
+
+<img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/missclassification.png?raw=true" width="600">
+
+In a <a href='https://pubmed.ncbi.nlm.nih.gov/35113160/'>prior study of 1390 laboratories surveyed by the College of American Patholgoists</a>, a high degree of discordance between HER2-0 and HER2-1+,2+,3+ by IHC was seen in 19% of samples. If we assume that for 19% of cases HER2-Low status is assigned by random chance proportional to underlying rates of HER2-0 and HER2-Low, this would indicate approximately half of these samples are misclassified, for a misclassification rate of 9.5%. We can see this would result in a true odds ratio of 0.87, which is minimally different from our reported odds ratio of 0.89, and does not support the classification of HER2-Low disease as a unique prognostic entity prior to the introduction of antibody drug conjugates for this population.
