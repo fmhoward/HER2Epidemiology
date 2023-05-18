@@ -77,7 +77,7 @@ Using analysis of pixel areas, we can then determine that approximately 11% of c
 
 <img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/piechart.png?raw=true" width="600">
 
-These misclassification rates would result in an odds ratio for pathologic complete response of 0.86. Even if the true misclassfiication rate is slightly higher, these minor differences do not support the classification of HER2-Low disease as a unique prognostic entity prior to the introduction of antibody drug conjugates for this population.
+These misclassification rates would result in an odds ratio for pathologic complete response of 0.86. Even if the true misclassification rate is slightly higher, these minor differences do not support the classification of HER2-Low disease as a unique prognostic entity prior to the introduction of antibody drug conjugates for this population.
 
 
 
