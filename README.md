@@ -63,15 +63,13 @@ HER2-Low	12.6 - 0.65 * a * x + 0.35 * b * x	52.4 - 0.65 * (1 - a) * x + 0.35 * (
 Total		20					80							100
 ```
 
-We can plot the resulting odds ratio as a function of the misclassification rate x, ranging from 0 (indicating the current classification was perfect) to 50 (indicating that classification of HER2-0 and HER2-low is occuring at random):
+We can plot the resulting odds ratio as a function of the misclassification rate x, ranging from 0 (indicating the current classification was perfect) to 50 (indicating that classification of HER2-0 and HER2-low is occuring at random). Of note, a misclassification of > 50% would indicate anti-correlation of HER2-IHC and true underlying HER2 expression:
 
 <img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/misclassification.png?raw=true" width="600">
 
-It would require a misclassfiication rate of over 28% to double the effect size of HER2-low status on rates of pathologic complete response, and this effect size would still be marginal (equivalent to a ~20% change in hormone receptor status expression).
+Thus, a misclassfiication rate of over 28% is required to double the effect size of HER2-low status on rates of pathologic complete response, and this effect size would still be fairly marginal (equivalent to a ~20% change in hormone receptor status expression). The true misclassification rate of HER IHC is unknown, given the lack of a gold standard of low level HER2 expression. However, we can attempt to estimate rates of misclassification from published work. <a href='https://pubmed.ncbi.nlm.nih.gov/35113160/'>A prior study</a> assessed concordance between 18 pathologists in classifying 170 cases ranging from HER2-0 to HER2-3+ by IHC, and found there was significant variability in the classiifcation of cases as HER2-Low versus HER2-0. We can create an optimistic lower bound of the misclassification rate suggested by this study, by assuming that the cases for which a majority of pathologists classified as HER2-Low are truly HER2-Low, and the cases for which a majority of pathologists classified as HER2-0 are truly HER2-0. We exclude cases that were classified as HER2 IHC 3+.
 
-<a href='https://pubmed.ncbi.nlm.nih.gov/35113160/'>A prior study</a> evaluating 18 pathologists classifying 170 cases ranging from HER2-0 to HER2-3+ by IHC found there was significant variability in the classiifcation of cases as HER2-Low versus HER2-0. We can create an optimistic lower bound of the misclassification rate suggested by this study, by assuming that the cases for which a majority of pathologists classified as HER2-Low are truly HER2-Low, and the cases for which a majority of pathologists classified as HER2-0 are truly HER2-0:
-
-<img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/optimistic.png?raw=true" width="600">
+<img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/optimistic3.png?raw=true" width="600">
 
 Using analysis of pixel areas, we can then determine that approximately 11% of cases would be misclassified in this optimistic projection. In reality, some of the cases deemed 'HER2-Low' by the majority may actually be HER2-0, and vice versa, so the true misclassification rate is slightly higher. A similar rate of misclassification (13%) is seen using a pixel level analysis of the <a href='https://pubmed.ncbi.nlm.nih.gov/35113160/'>biopsy cores classified in a survey of 1390 laboratories</a>. This is again performed using an optimistic assumption that the correct classification is the one made by the majority of laboratories. 
 
