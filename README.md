@@ -71,7 +71,8 @@ Thus, a misclassfiication rate of over 28% is required to double the effect size
 
 <img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/optimistic3.png?raw=true" width="600">
 
-Using analysis of pixel areas, we can reconstruct an approximate representation of the pathologist grading of samples from this study.
+Using analysis of pixel areas, we can reconstruct an approximate representation of the pathologist grading of samples from this study, using an estimation of the midpoint of HER2 3+ to remove samples that would be HER2 3+ from the analysis (as these are not relevant for the distinction of HER2-0 and HER2-Low).
+
 | Pathologist | HER2 0 | HER2 1-2+ |
 |-------------|--------|-----------|
 | 1           | 23     | 116       |
