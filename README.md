@@ -96,13 +96,11 @@ Using analysis of pixel areas, we can reconstruct an approximate representation 
 
 Using this data, we can determine that approximately 10% of cases would be misclassified in an optimistic projection (where the minority class is the misclassified group), with a false positive rate for HER2-Low of 5% and a false negative rate of 20%. This would result in a reduction in the odds ratio to 0.87. 
 
-In reality, some of the cases deemed 'HER2-Low' by the majority may actually be HER2-0, and vice versa, so the true misclassification rate is slightly higher. We can perform a more realistic projection by assuming that any case with over 20% disagreement is equally like to be 'true' HER2-0 or 'true' HER2-Low, which slightly increases the FPR to 8% and FNR to 22% (overall misclassification of 14%), and odds ratio of 0.86. As we can see, these minor differences do not support the classification of HER2-Low disease as a unique prognostic entity prior to the introduction of antibody drug conjugates for this population.
+In reality, some of the cases deemed 'HER2-Low' by the majority may actually be HER2-0, and vice versa, so the true misclassification rate is slightly higher. We can perform a more realistic projection by assuming that any case with over 20% disagreement is equally like to be 'true' HER2-0 or 'true' HER2-Low, which slightly increases the FPR to 8% and FNR to 22% (overall misclassification of 14%), and odds ratio of 0.86. A 20% disagremeent was chosen for this projection as the likelihood of misclassification when agreement is seen in 15/18 raters with a false positive rate of ~20% is < 0.01%. 
 
-<figure>
-  <img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/realistic.png?raw=true" width="600">
-  <figcaption>False Negative / False Positive Classification of HER2-Low Disease</figcaption>
-</figure>
+<img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/realistic.png?raw=true" width="600">
 
+Calculating an exact rate of misclassification when no gold standard is known is not straightforward, and relies on a variety of assumptions. There is almost certainly disagreement between HER2 mRNA expression, protein expression, and automated techniques to immunohistochemistry interpretation, and the misclassification of HER2 IHC interpreted by pathologists could be inflated by chosing an alternative 'gold standard' that is most dissimilar to IHC. However, these estimates of misclassification can be used to account for errors due to inter-observer variability, and it is clear that half or more of cases are uniformly and consistently classified by large numbers of pathologists. As we can see, when accounting for misclassification, the these minor differences in outcome do not support the classification of HER2-Low disease as a unique prognostic entity prior to the introduction of antibody drug conjugates for this population.
 
 
 
