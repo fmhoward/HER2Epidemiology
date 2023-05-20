@@ -69,7 +69,7 @@ We can plot the resulting odds ratio as a function of the misclassification rate
 
 Thus, a misclassfiication rate of over 28% is required to double the effect size of HER2-low status on rates of pathologic complete response, and this effect size would still be fairly marginal (equivalent to a ~20% change in hormone receptor status expression). The true misclassification rate of HER IHC is unknown, given the lack of a gold standard of low level HER2 expression. However, we can attempt to estimate rates of misclassification from published work. <a href='https://pubmed.ncbi.nlm.nih.gov/35113160/'>A prior study</a> assessed concordance between 18 pathologists in classifying 170 cases ranging from HER2-0 to HER2-3+ by IHC, and found there was significant variability in the classiifcation of cases as HER2-Low versus HER2-0. We can create an optimistic lower bound of the misclassification rate suggested by this study, by assuming that the cases for which a majority of pathologists classified as HER2-Low are truly HER2-Low, and the cases for which a majority of pathologists classified as HER2-0 are truly HER2-0.
 
-<img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/optimistic3.png?raw=true" width="600">
+<img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/optimistic4.png?raw=true" width="600">
 
 Using analysis of pixel areas, we can reconstruct an approximate representation of the pathologist grading of samples from this study, using an estimation of the midpoint of HER2 3+ to remove samples that would be HER2 3+ from the analysis (as these are not relevant for the distinction of HER2-0 and HER2-Low).
 
