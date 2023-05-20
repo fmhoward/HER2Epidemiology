@@ -98,7 +98,11 @@ Using this data, we can determine that approximately 10% of cases would be miscl
 
 In reality, some of the cases deemed 'HER2-Low' by the majority may actually be HER2-0, and vice versa, so the true misclassification rate is slightly higher. We can perform a more realistic projection by assuming that any case with over 20% disagreement is equally like to be 'true' HER2-0 or 'true' HER2-Low, which slightly increases the FPR to 8% and FNR to 22% (overall misclassification of 14%), and odds ratio of 0.86. As we can see, these minor differences do not support the classification of HER2-Low disease as a unique prognostic entity prior to the introduction of antibody drug conjugates for this population.
 
-<img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/realistic.png?raw=true" width="600">
+<figure>
+  <img src="https://github.com/fmhoward/HER2Epidemiology/blob/main/realistic.png?raw=true" width="600">
+  <figcaption>False Negative / False Positive Classification of HER2-Low Disease</figcaption>
+</figure>
+
 
 
 
