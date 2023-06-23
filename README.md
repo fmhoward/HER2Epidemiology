@@ -75,24 +75,24 @@ Using analysis of pixel areas, we can reconstruct an approximate representation 
 
 | Readers     | HER2 0 | HER2 1-2+ |
 |-------------|--------|-----------|
-| 1           | 23     | 116       |
-| 2           | 24     | 115       |
-| 3           | 26     | 113       |
-| 4           | 29     | 110       |
-| 5           | 29     | 110       |
-| 6           | 31     | 108       |
-| 7           | 33     | 106       |
-| 8           | 37     | 102       |
-| 9           | 40     | 99        |
-| 10          | 42     | 97        |
-| 11          | 44     | 95        |
-| 12          | 44     | 95        |
-| 13          | 47     | 92        |
-| 14          | 52     | 87        |
-| 15          | 54     | 85        |
-| 16          | 61     | 78        |
-| 17          | 78     | 61        |
-| 18          | 92     | 47        |
+| 1/18        | 23     | 116       |
+| 2/18        | 24     | 115       |
+| 3/18        | 26     | 113       |
+| 4/18        | 29     | 110       |
+| 5/18        | 29     | 110       |
+| 6/18        | 31     | 108       |
+| 7/18        | 33     | 106       |
+| 8/18        | 37     | 102       |
+| 9/18        | 40     | 99        |
+| 10/18       | 42     | 97        |
+| 11/18       | 44     | 95        |
+| 12/18       | 44     | 95        |
+| 13/18       | 47     | 92        |
+| 14/18       | 52     | 87        |
+| 15/18       | 54     | 85        |
+| 16/18       | 61     | 78        |
+| 17/18       | 78     | 61        |
+| 18/18       | 92     | 47        |
 
 Using this data, we can determine that approximately 10% of cases would be misclassified in an optimistic projection (where the minority class is the misclassified group), with a false positive rate for HER2-Low of 5% and a false negative rate of 20%. This would result in a reduction in the odds ratio to 0.87. 
 
